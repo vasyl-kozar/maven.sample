@@ -13,13 +13,13 @@ import com.fasterxml.jackson.databind.type.TypeFactory;
 
 public class Utility {
 	
-	public static List<Student> parseJsonFile() throws JsonParseException, JsonMappingException, IOException{
+	public static List<Students> parseJsonFile() throws JsonParseException, JsonMappingException, IOException{
 	InputStream input = Utility.class.getResourceAsStream("/com/lits/maven/sample/Students.json");
 	ObjectMapper objectMapper = new ObjectMapper();
 	objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
 	objectMapper.enable(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY);
 	TypeFactory typeFactory = TypeFactory.defaultInstance();
-	List<Student> students = objectMapper.readValue(input, typeFactory.constructCollectionType(ArrayList.class, Student.class));
+	List<Students> students = objectMapper.readValue(input, typeFactory.constructCollectionType(ArrayList.class, Students.class));
 	return students;
 	}
 
