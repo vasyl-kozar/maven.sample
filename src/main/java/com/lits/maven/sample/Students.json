@@ -1,0 +1,37 @@
+[
+	{
+		"surname" : "Hryhorchuk",
+		"age" : "30",
+		"year" : "5"
+	},
+	{
+		"surname" : "Lazar",
+		"age" : "31",
+		"year" : "4"
+	}, 
+	{
+		"surname" : "Lazar",
+		"age" : "31",
+		"year" : "5"
+	}, 
+	{
+		"surname" : "Hryhorchuk",
+		"age" : "18",
+		"year" : "1"
+	},
+	{
+		"surname" : "Lazar",
+		"age" : "28",
+		"year" : "4"
+	},
+	{
+		"surname" : "Kozar",
+		"age" : "24",
+		"year" : "3"
+	},
+	{
+		"surname" : "Ferenchak",
+		"age" : "27",
+		"year" : "4"
+	}
+]
