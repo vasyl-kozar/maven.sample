@@ -1,4 +1,6 @@
 package com.lits.maven.sample;
+
+import java.util.Comparator;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -40,5 +42,19 @@ public class Students {
 		this.year = year;
 	}
 
-	
+	//Comparator for sorting the list by surname
+	 public static Comparator<Students> StuNameComparator = new Comparator<Students>() {
+
+	  public int compare(Students obj1, Students obj2) {
+	   int byName = obj1.getSurname().compareTo(obj2.getSurname());
+	   if (byName == 0) {
+	    int byAge = Integer.compare(obj1.getAge(), obj2.getAge());
+	    if (byAge == 0) {
+	     return Integer.compare(obj1.getYear(), obj2.getYear());
+	    } else
+	     return byAge;
+	   } else
+	    return byName;
+	  }
+	 };
 }
